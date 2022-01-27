@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated thecareunit -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="thecareunit.presentation.ThecareunitModelWizardID"
+            name="%_UI_ThecareunitModelWizard_label"
+            class="thecareunit.presentation.ThecareunitModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ThecareunitModelFile.gif">
+         <description>%_UI_ThecareunitModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated thecareunit -->
+      <editor
+            id="thecareunit.presentation.ThecareunitEditorID"
+            name="%_UI_ThecareunitEditor_label"
+            icon="icons/full/obj16/ThecareunitModelFile.gif"
+            extensions="thecareunit"
+            class="thecareunit.presentation.ThecareunitEditor"
+            contributorClass="thecareunit.presentation.ThecareunitActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
