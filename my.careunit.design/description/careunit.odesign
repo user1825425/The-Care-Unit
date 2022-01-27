@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="careunit" version="12.0.0.2017041100">
+  <ownedViewpoints name="TheCareUnitSystem" modelFileExtension="thecareunit">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CareUnit" domainClass="thecareunit::TheCareUnitSystem" enablePopupBars="true">
+      <metamodel href="http://www.example.org/thecareunit#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="DoctorNode" semanticCandidatesExpression="feature:doctors" domainClass="thecareunit::Doctor">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/my.careunit.design/icons/Doctor.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="AdminNode" semanticCandidatesExpression="feature:admin" domainClass="thecareunit::Admin">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/my.careunit.design/icons/Admin.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DiscussionNode" semanticCandidatesExpression="feature:discussions" domainClass="thecareunit::Discussion">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:title" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/my.careunit.design/icons/Discussion.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="PostNode" semanticCandidatesExpression="feature:posts" domainClass="thecareunit::Post">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:content" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/my.careunit.design/icons/Post.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="NewsfeedNode" semanticCandidatesExpression="feature:newsfeed" domainClass="thecareunit::Newsfeed">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:notification" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/my.careunit.design/icons/Newsfeed.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="CommentNode" semanticCandidatesExpression="feature:comments" domainClass="thecareunit::Comment">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:comment" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/my.careunit.design/icons/Comment.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="MessageNode" semanticCandidatesExpression="feature:messages" domainClass="thecareunit::Message">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:message" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/my.careunit.design/icons/Message.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="QueryNode" semanticCandidatesExpression="feature:queries" domainClass="thecareunit::Query">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:title" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/my.careunit.design/icons/Query.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ResearchPaperNode" semanticCandidatesExpression="feature:recommendations" domainClass="thecareunit::ResearchPaper">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:title" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/my.careunit.design/icons/ResearchPaper.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ArticleNode" semanticCandidatesExpression="feature:recommendations" domainClass="thecareunit::Article">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:title" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/my.careunit.design/icons/Article.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ReportNode" semanticCandidatesExpression="feature:recommendations" domainClass="thecareunit::Report">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="feature:title" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/my.careunit.design/icons/Report.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="Admin-Query" sourceMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='AdminNode']" targetMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='QueryNode']" targetFinderExpression="feature:queries">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Doctor-Comment" sourceMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='DoctorNode']" targetMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='CommentNode']" targetFinderExpression="feature:comments">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Newsfeed-Post" sourceMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='NewsfeedNode']" targetMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='PostNode']" targetFinderExpression="feature:posts">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Doctor-Discussion" sourceMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='DoctorNode']" targetMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='DiscussionNode']" targetFinderExpression="feature:discussions">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Doctor-Recommendations" sourceMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='DoctorNode']" targetMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='ResearchPaperNode'] //@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='ReportNode'] //@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='ArticleNode']" targetFinderExpression="feature:recommendations">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Recommendations-Doctor" sourceMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='ResearchPaperNode'] //@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='ReportNode'] //@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='ArticleNode']" targetMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='DoctorNode']" targetFinderExpression="feature:doctors">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Discussion-Message" sourceMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='DiscussionNode']" targetMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='MessageNode']" targetFinderExpression="feature:messages">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Doctor-Post" sourceMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='DoctorNode']" targetMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='PostNode']" targetFinderExpression="feature:posts">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Post-Comment" sourceMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='PostNode']" targetMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='CommentNode']" targetFinderExpression="feature:comments">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Doctor-Newsfeed" sourceMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='DoctorNode']" targetMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='NewsfeedNode']" targetFinderExpression="feature:newsfeed">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Doctor-Query" sourceMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='DoctorNode']" targetMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='QueryNode']" targetFinderExpression="feature:queries">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Doctor-Message" sourceMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='DoctorNode']" targetMapping="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='MessageNode']" targetFinderExpression="feature:messages">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Tools">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateDoctor" label="Doctor" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='DoctorNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="thecareunit::Doctor" referenceName="doctor">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="email"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="specialization"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="fieldOfInterest"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="hospital"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="location"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="contact"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateAdmin" label="Admin" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='AdminNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="thecareunit::Admin" referenceName="admin">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="feature:name"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="queries" valueExpression="feature:queries"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateDiscussion" label="Discussion" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='DiscussionNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="thecareunit::Discussion" referenceName="discussions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="title"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreatePost" label="Post" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='PostNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="thecareunit::Post" referenceName="posts">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="content"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateNewsfeed" label="Newsfeed" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='NewsfeedNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="thecareunit::Newsfeed" referenceName="newsfeed">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="notification"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateComment" label="Comment" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='CommentNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="thecareunit::Comment" referenceName="comments">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="comment"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateMessage" label="Message" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='MessageNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="thecareunit::Message" referenceName="messages">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="message"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateQuery" label="Query" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='QueryNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="thecareunit::Query" referenceName="queries">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="title"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="query"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateResearchPaper" label="Research Paper" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='ResearchPaperNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="thecareunit::ResearchPaper" referenceName="recommendations">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="title"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="author"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateArticle" label="Article" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='ArticleNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="thecareunit::Article" referenceName="recommendations">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="title"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="author"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateReport" label="Report" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@nodeMappings[name='ReportNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="thecareunit::Report" referenceName="recommendations">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="title"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="author"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Doctor-Post" label="Doctor-Post" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@edgeMappings[name='Doctor-Post']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Doctor-Comment" label="Doctor-Comment" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@edgeMappings[name='Doctor-Comment']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Doctor-Message" label="Doctor-Message" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@edgeMappings[name='Doctor-Message']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Doctor-Newsfeed" label="Doctor-Newsfeed" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@edgeMappings[name='Doctor-Newsfeed']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Doctor-Discussion" label="Doctor-Discussion" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@edgeMappings[name='Doctor-Discussion']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Doctor-Query" label="Doctor-Query" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@edgeMappings[name='Doctor-Query']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Doctor-Recommendations" label="Doctor-Recommendations" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@edgeMappings[name='Doctor-Recommendations']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Newsfeed-Post" label="Newsfeed-Post" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@edgeMappings[name='Newsfeed-Post']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Post-Comment" label="Post-Comment" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@edgeMappings[name='Post-Comment']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Recommendations-Doctor" label="Recommendations-Doctor" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@edgeMappings[name='Recommendations-Doctor']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Admin-Query" label="Admin-Query" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@edgeMappings[name='Admin-Query']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Discussion-Message" label="Discussion-Message" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='TheCareUnitSystem']/@ownedRepresentations[name='CareUnit']/@defaultLayer/@edgeMappings[name='Discussion-Message']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="my.careunit.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
