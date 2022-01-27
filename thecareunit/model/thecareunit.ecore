@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="thecareunit" nsURI="http://www.example.org/thecareunit" nsPrefix="thecareunit">
+  <eClassifiers xsi:type="ecore:EClass" name="TheCareUnitSystem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="admin" eType="#//Admin"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="discussions" upperBound="-1"
+        eType="#//Discussion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="doctors" upperBound="-1"
+        eType="#//Doctor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recommendations" upperBound="-1"
+        eType="#//Recommendations" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="newsfeed" upperBound="-1"
+        eType="#//Newsfeed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posts" upperBound="-1"
+        eType="#//Post" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="comments" upperBound="-1"
+        eType="#//Comment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="queries" upperBound="-1"
+        eType="#//Query" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messages" upperBound="-1"
+        eType="#//Message" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Admin">
+    <eOperations name="handleQueries"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="queries" upperBound="-1"
+        eType="#//Query"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Discussion">
+    <eOperations name="createNewDiscussion"/>
+    <eOperations name="viewDiscussions"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messages" upperBound="-1"
+        eType="#//Message"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Doctor">
+    <eOperations name="searchDoctor">
+      <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="followdoctor"/>
+    <eOperations name="editProfileInformation"/>
+    <eOperations name="viewProfile"/>
+    <eOperations name="sendQuery"/>
+    <eOperations name="viewRecommendations"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="specialization" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldOfInterest" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hospital" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="comments" upperBound="-1"
+        eType="#//Comment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recommendations" upperBound="-1"
+        eType="#//Recommendations" eOpposite="#//Recommendations/doctors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="discussions" upperBound="-1"
+        eType="#//Discussion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messages" upperBound="-1"
+        eType="#//Message"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="newsfeed" eType="#//Newsfeed"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posts" upperBound="-1"
+        eType="#//Post"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="queries" upperBound="-1"
+        eType="#//Query"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="followers" upperBound="-1"
+        eType="#//Doctor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Post">
+    <eOperations name="createPost">
+      <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="editPost"/>
+    <eOperations name="deletePost"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="comments" eType="#//Comment"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Query">
+    <eOperations name="viewQuery"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="query" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Recommendations" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="doctors" upperBound="-1"
+        eType="#//Doctor" eOpposite="#//Doctor/recommendations"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Newsfeed">
+    <eOperations name="viewNewsfeed"/>
+    <eOperations name="viewNotifications"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="notification" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="posts" upperBound="-1"
+        eType="#//Post"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Comment">
+    <eOperations name="addComment">
+      <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="editComment"/>
+    <eOperations name="deleteComment"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Message">
+    <eOperations name="sendMessage"/>
+    <eOperations name="viewMessages"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResearchPaper" eSuperTypes="#//Recommendations">
+    <eOperations name="viewResearchPaper"/>
+    <eOperations name="downloadPaper"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Article" eSuperTypes="#//Recommendations">
+    <eOperations name="viewArticle"/>
+    <eOperations name="downloadArticle"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Report" eSuperTypes="#//Recommendations">
+    <eOperations name="viewReport"/>
+    <eOperations name="downloadReport"/>
+  </eClassifiers>
+</ecore:EPackage>

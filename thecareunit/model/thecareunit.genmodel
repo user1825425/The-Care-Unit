@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/thecareunit/src-gen" creationIcons="false" editDirectory="/thecareunit.edit/src-gen"
+    editorDirectory="/thecareunit.editor/src-gen" modelPluginID="thecareunit" modelName="Thecareunit"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>thecareunit.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Thecareunit" disposableProviderFactory="true" ecorePackage="thecareunit.ecore#/">
+    <genClasses ecoreClass="thecareunit.ecore#//TheCareUnitSystem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference thecareunit.ecore#//TheCareUnitSystem/admin"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference thecareunit.ecore#//TheCareUnitSystem/discussions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference thecareunit.ecore#//TheCareUnitSystem/doctors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference thecareunit.ecore#//TheCareUnitSystem/recommendations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference thecareunit.ecore#//TheCareUnitSystem/newsfeed"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference thecareunit.ecore#//TheCareUnitSystem/posts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference thecareunit.ecore#//TheCareUnitSystem/comments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference thecareunit.ecore#//TheCareUnitSystem/queries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference thecareunit.ecore#//TheCareUnitSystem/messages"/>
+    </genClasses>
+    <genClasses ecoreClass="thecareunit.ecore#//Admin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Admin/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference thecareunit.ecore#//Admin/queries"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Admin/handleQueries"/>
+    </genClasses>
+    <genClasses ecoreClass="thecareunit.ecore#//Discussion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Discussion/title"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference thecareunit.ecore#//Discussion/messages"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Discussion/createNewDiscussion"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Discussion/viewDiscussions"/>
+    </genClasses>
+    <genClasses ecoreClass="thecareunit.ecore#//Doctor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Doctor/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Doctor/email"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Doctor/specialization"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Doctor/fieldOfInterest"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Doctor/hospital"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Doctor/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Doctor/contact"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference thecareunit.ecore#//Doctor/comments"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference thecareunit.ecore#//Doctor/recommendations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference thecareunit.ecore#//Doctor/discussions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference thecareunit.ecore#//Doctor/messages"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference thecareunit.ecore#//Doctor/newsfeed"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference thecareunit.ecore#//Doctor/posts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference thecareunit.ecore#//Doctor/queries"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference thecareunit.ecore#//Doctor/followers"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Doctor/searchDoctor">
+        <genParameters ecoreParameter="thecareunit.ecore#//Doctor/searchDoctor/name"/>
+      </genOperations>
+      <genOperations ecoreOperation="thecareunit.ecore#//Doctor/followdoctor"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Doctor/editProfileInformation"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Doctor/viewProfile"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Doctor/sendQuery"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Doctor/viewRecommendations"/>
+    </genClasses>
+    <genClasses ecoreClass="thecareunit.ecore#//Post">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Post/content"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference thecareunit.ecore#//Post/comments"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Post/createPost">
+        <genParameters ecoreParameter="thecareunit.ecore#//Post/createPost/name"/>
+      </genOperations>
+      <genOperations ecoreOperation="thecareunit.ecore#//Post/editPost"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Post/deletePost"/>
+    </genClasses>
+    <genClasses ecoreClass="thecareunit.ecore#//Query">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Query/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Query/query"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Query/viewQuery"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="thecareunit.ecore#//Recommendations">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Recommendations/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Recommendations/author"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference thecareunit.ecore#//Recommendations/doctors"/>
+    </genClasses>
+    <genClasses ecoreClass="thecareunit.ecore#//Newsfeed">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Newsfeed/notification"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference thecareunit.ecore#//Newsfeed/posts"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Newsfeed/viewNewsfeed"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Newsfeed/viewNotifications"/>
+    </genClasses>
+    <genClasses ecoreClass="thecareunit.ecore#//Comment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Comment/comment"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Comment/addComment">
+        <genParameters ecoreParameter="thecareunit.ecore#//Comment/addComment/name"/>
+      </genOperations>
+      <genOperations ecoreOperation="thecareunit.ecore#//Comment/editComment"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Comment/deleteComment"/>
+    </genClasses>
+    <genClasses ecoreClass="thecareunit.ecore#//Message">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute thecareunit.ecore#//Message/message"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Message/sendMessage"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Message/viewMessages"/>
+    </genClasses>
+    <genClasses ecoreClass="thecareunit.ecore#//ResearchPaper">
+      <genOperations ecoreOperation="thecareunit.ecore#//ResearchPaper/viewResearchPaper"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//ResearchPaper/downloadPaper"/>
+    </genClasses>
+    <genClasses ecoreClass="thecareunit.ecore#//Article">
+      <genOperations ecoreOperation="thecareunit.ecore#//Article/viewArticle"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Article/downloadArticle"/>
+    </genClasses>
+    <genClasses ecoreClass="thecareunit.ecore#//Report">
+      <genOperations ecoreOperation="thecareunit.ecore#//Report/viewReport"/>
+      <genOperations ecoreOperation="thecareunit.ecore#//Report/downloadReport"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
