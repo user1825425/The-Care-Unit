@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thecareunit:TheCareUnitSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:thecareunit="http://www.example.org/thecareunit">
+  <admin name="Admin" queries="//@queries.0"/>
+  <discussions title="Surgical Emergencies and Safety of Patient in Surgery" messages="//@messages.0 //@messages.1"/>
+  <doctors name="Dr. Maham" email="dr.maham@gmail.com" specialization="Neuro Surgery" fieldOfInterest="Surgery" hospital="Health Care Hospital" location="Rawalpindi" contact="123456" comments="//@comments.0" recommendations="//@recommendations.1 //@recommendations.2 //@recommendations.0" discussions="//@discussions.0" messages="//@messages.0" newsfeed="//@newsfeed.0" posts="//@posts.0" queries="//@queries.0"/>
+  <doctors name="Dr. Zainab" email="dr.zainab@gamil.com" specialization="General Surgery" fieldOfInterest="Surgery, Medicine" hospital="Central Hospital" location="Karachi" contact="456780" comments="//@comments.1" recommendations="//@recommendations.2 //@recommendations.3" discussions="//@discussions.0" messages="//@messages.1" newsfeed="//@newsfeed.1" posts="//@posts.1"/>
+  <recommendations xsi:type="thecareunit:ResearchPaper" title="Research Paper 'Central nervous system plasticity influences language'" doctors="//@doctors.0"/>
+  <recommendations xsi:type="thecareunit:Article" title="Article 'Neurosurgery'" doctors="//@doctors.0"/>
+  <recommendations xsi:type="thecareunit:Report" title="Report 'Challenges in Surgery'" doctors="//@doctors.0 //@doctors.1"/>
+  <recommendations xsi:type="thecareunit:ResearchPaper" title="Trends in Medical Specialization" doctors="//@doctors.1"/>
+  <newsfeed notification="Dr. Maham Newsfeed" posts="//@posts.0 //@posts.1"/>
+  <newsfeed notification="Dr. Zainab Newsfeed" posts="//@posts.1 //@posts.0"/>
+  <posts content="Dr. Maham's Post" comments="//@comments.1"/>
+  <posts content="Dr. Zainab's Post" comments="//@comments.0"/>
+  <comments comment="Dr. Maham 's Comment"/>
+  <comments comment="Dr. Zainab's Comment"/>
+  <queries title="Dr. Maham's Query" query="Query: Issue in changing the settings"/>
+  <messages message="Dr. Maham's Message"/>
+  <messages message="Dr. Zainab's Message"/>
+</thecareunit:TheCareUnitSystem>
